@@ -25,18 +25,18 @@ def find_paths_between_refuges(tx, start_refuge, end_refuge, bici):
       paths = result.single()
       if paths:
             paths = paths["path_names"]
-            print(f"I percorsi tra il rifugio {start_refuge} e il rifugio {end_refuge} sono:")
+            print(f"I percorsi tra il {start_refuge} e il {end_refuge} sono:")
             for path in paths:
                   print(path)
       else:
             if bici == "s":
-                  print(f"Non esistono percorsi tra il rifugio {start_refuge} e il rifugio {end_refuge} per la bici.")
+                  print(f"Non esistono percorsi tra il {start_refuge} e il {end_refuge} per la bici.")
             else:
-                  print(f"Non esistono percorsi tra il rifugio {start_refuge} e il rifugio {end_refuge}.")
+                  print(f"Non esistono percorsi tra il {start_refuge} e il {end_refuge}.")
 
 while True:
-      print("Inserisci il nome del rifugio di partenza e quello di arrivo, separati da una virgola (es. Rifugio 1,Rifugio 4) oppure premi invio per uscire.")
-      start_refuge, end_refuge = input().split(",")
+      start_refuge = input("\nInserisci il rifugio di partenza: ")
+      end_refuge = input("Inserisci il rifugio di arrivo: ")
       bici = input("Vuoi usare la bici? (s/n)")
       if start_refuge == "":
             break

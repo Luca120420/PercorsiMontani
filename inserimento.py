@@ -52,11 +52,16 @@ class SentieriMontani:
             session.write_transaction(self.create_mountain_zone, "Montagna A")
 
             # Crea i sentieri
-            session.write_transaction(self.create_trail, "Sentiero 1", "Montagna A", True, 120, "Facile", "Punto A")
-            session.write_transaction(self.create_trail, "Sentiero 2", "Montagna A", True, 90, "Medio", "Punto B")
-            session.write_transaction(self.create_trail, "Sentiero 3", "Montagna A", True, 180, "Difficile", "Punto C")
-            session.write_transaction(self.create_trail, "Sentiero 4", "Montagna A", True, 150, "Medio", "Punto D")
-            session.write_transaction(self.create_trail, "Sentiero 5", "Montagna A", True, 120, "Difficile", "Punto E")
+            session.write_transaction(self.create_trail, "Sentiero 1", "Montagna A", False, 120, "Facile", "Punto A")
+            session.write_transaction(self.create_trail, "Sentiero 2", "Montagna A", False, 90, "Medio", "Punto B")
+            session.write_transaction(self.create_trail, "Sentiero 3", "Montagna A", False, 180, "Difficile", "Punto C")
+            session.write_transaction(self.create_trail, "Sentiero 4", "Montagna A", False, 150, "Medio", "Punto D")
+            session.write_transaction(self.create_trail, "Sentiero 5", "Montagna A", False, 120, "Difficile", "Punto E")
+            session.write_transaction(self.create_trail, "Sentiero 6", "Montagna A", False, 120, "Facile", "Punto F")
+            session.write_transaction(self.create_trail, "Sentiero 7", "Montagna A", False, 90, "Medio", "Punto G")
+            session.write_transaction(self.create_trail, "Sentiero 8", "Montagna A", False, 180, "Difficile", "Punto H")
+            session.write_transaction(self.create_trail, "Sentiero 9", "Montagna A", False, 150, "Medio", "Punto I")
+            session.write_transaction(self.create_trail, "Sentiero 10", "Montagna A", False, 120, "Difficile", "Punto J")
 
             # Crea i rifugi
             session.write_transaction(self.create_refuge, "Rifugio 1", ["Sentiero 1", "Sentiero 2"])
@@ -84,16 +89,9 @@ class SentieriMontani:
             session.write_transaction(self.create_leads_to, "Sentiero 4", "Sentiero 5")
             session.write_transaction(self.create_leads_to, "Sentiero 5", "Sentiero 1")
 
-            # Aggiungi altri sentieri e relazioni
-            session.write_transaction(self.create_trail, "Sentiero 6", "Montagna A", True, 120, "Facile", "Punto F")
-            session.write_transaction(self.create_trail, "Sentiero 7", "Montagna A", True, 90, "Medio", "Punto G")
-            session.write_transaction(self.create_trail, "Sentiero 8", "Montagna A", True, 180, "Difficile", "Punto H")
-            session.write_transaction(self.create_trail, "Sentiero 9", "Montagna A", True, 150, "Medio", "Punto I")
-            session.write_transaction(self.create_trail, "Sentiero 10", "Montagna A", True, 120, "Difficile", "Punto J")
 
 
 if __name__ == "__main__":
-    greeter = SentieriMontani("neo4j+s://793c71a3.databases.neo4j.io", "neo4j",
-                              "E_OchQ6w3qMp6jPMSVd9rYJVjczHKUa-sRqy_smT8u8")
+    greeter = SentieriMontani(url, username, password)
     greeter.create_mountain_database()
     greeter.close()
