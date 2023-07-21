@@ -1,4 +1,4 @@
-## Readme - Programma 1: Creazione di una base di dati di sentieri montani con Neo4j
+# Readme - Programma 1: Creazione di una base di dati di sentieri montani con Neo4j
 
 Questo programma utilizza il database graph-oriented Neo4j per creare una base di dati di sentieri montani e rifugi collegati. Utilizzando la libreria neo4j di Python, il programma si connette a un'istanza di Neo4j specificata tramite URL, nome utente e password. Successivamente, vengono definite le classi e i metodi per la creazione della base di dati.
 
@@ -13,7 +13,7 @@ Il programma consiste di due parti principali:
 3. Incollare l'URL, nome utente e password nel codice Python nella variabile url, username e password, rispettivamente.
 4. Eseguire il programma. Sarà creata una base di dati di esempio contenente zone montane, sentieri e rifugi con relazioni tra di essi.
 
-## Readme - Programma 2: Trova percorsi tra rifugi montani con Neo4j
+# Readme - Programma 2: Trova percorsi tra rifugi montani con Neo4j
 
 Questo programma utilizza il database graph-oriented Neo4j per trovare i percorsi tra due rifugi montani specificati dall'utente. Utilizzando la libreria neo4j di Python, il programma si connette a un'istanza di Neo4j specificata tramite URL, nome utente e password. Successivamente, viene definito il metodo find_paths_between_refuges() per eseguire la query di ricerca dei percorsi.
 
