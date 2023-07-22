@@ -91,7 +91,6 @@ class SentieriMontani:
 
 
 
-if __name__ == "__main__":
-    greeter = SentieriMontani(url, username, password)
-    greeter.create_mountain_database()
-    greeter.close()
+greeter = SentieriMontani(url, username, password)
+greeter.create_mountain_database()
+greeter.close()
